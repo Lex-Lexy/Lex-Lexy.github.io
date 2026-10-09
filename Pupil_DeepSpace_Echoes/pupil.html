@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>瞳 · PUPIL / 深空回响</title><link rel="stylesheet" href="css/fonts.css"><link rel="stylesheet" href="css/controls.css"><link rel="stylesheet" href="css/interface.css"></head><body>
+<canvas id="game"></canvas>
+<div id="panel" class="collapsed">
+  <div class="panelHeader"><span>设 置</span><button id="panelClose">−</button></div>
+  <div class="row"><span class="label">敌速</span><input type="range" id="speedSlider" min="0.3" max="1.6" step="0.05" value="1.0"><span class="val" id="speedVal">1.00×</span></div>
+  <div class="row"><span class="label">伤害</span><input type="range" id="dmgSlider" min="0.2" max="2.5" step="0.05" value="1.0"><span class="val" id="dmgVal">1.00×</span></div>
+  <div class="row"><span class="label">范围</span><input type="range" id="rangeSlider" min="0.4" max="2.0" step="0.05" value="1.0"><span class="val" id="rangeVal">1.00×</span></div>
+  <div class="row"><span class="label">尾阻</span><input type="range" id="trailSlider" min="0.3" max="2.5" step="0.05" value="1.0"><span class="val" id="trailVal">1.00×</span></div>
+  <div class="row"><span class="label">敌方</span><div class="btnGroup"><button id="btnAuto" class="tbtn">自动</button><button id="btnManual" class="tbtn on">手动</button></div></div>
+  <div class="row"><span class="label">按钮</span><div class="btnGroup"><button id="btnTouchOn" class="tbtn on">显示</button><button id="btnTouchOff" class="tbtn">隐藏</button></div></div>
+</div>
+<div id="panelToggle">⚙</div>
+<div id="pauseBtn" class="hidden">⏸</div>
+<div id="touchVBtn" class="hidden">V</div>
+<div id="touchEBtn" class="hidden">E</div>
+<div id="touchFBtn" class="hidden">F</div>
+<div id="touchKBtn" class="hidden">]</div>
+<div id="shadowBtn">B</div>
+<div id="charBtn">[</div>
+<div id="skillBtn">P</div>
+
+<div id="app"></div><div id="hud" aria-live="off"></div><div id="modal"></div><script src="js/config.js"></script><script src="js/art.js"></script><script src="js/fluid-art.js"></script><script src="js/state.js"></script><script src="js/physics.js"></script><script src="js/input.js"></script><script src="js/world.js"></script><script src="js/skills.js"></script><script src="js/entities.js"></script><script src="js/combat.js"></script><script src="js/camera.js"></script><script src="js/textures.js"></script><script src="js/render.js"></script><script src="js/controls.js"></script><script src="js/expansion.js"></script><script src="js/ecology.js"></script><script src="js/ai.js"></script><script src="js/visuals.js"></script><script src="js/lighting.js"></script><script src="js/results.js"></script><script src="js/interface.js"></script><script src="js/loop.js"></script></body></html>

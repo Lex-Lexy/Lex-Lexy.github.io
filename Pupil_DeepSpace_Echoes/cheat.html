@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>瞳 · 深空实验室 / 作弊器</title><link rel="stylesheet" href="css/fonts.css"><link rel="stylesheet" href="css/laboratory.css"><link rel="stylesheet" href="css/laboratory-theme.css"></head><body>
+<header><a class="lab-brand" href="pupil.html"><span class="brand-eye"></span><span>瞳 <small>PUPIL / LAB</small></span></a><nav><button data-tab="chars" class="active">行者参数</button><button data-tab="hunters">追猎者参数</button><button data-tab="global">全局环境</button><button data-tab="export">配置管理</button></nav><a href="pupil.html" class="return-link">返回游戏 ↗</a><div class="status" id="status" role="status">已保存</div></header>
+<main><section class="lab-intro"><div><div class="eyebrow">OBSERVATORY / BALANCE LABORATORY</div><h1>深空实验室<span> / 作弊器</span></h1><p>调校每一次追逐。所有修改自动保存，也可导出为独立配置。</p></div><div class="lab-metrics"><div><b>08</b><small>行者</small></div><div><b>07</b><small>追猎者</small></div><div><b id="modifiedCount">00</b><small>修改项</small></div></div></section>
+  <section id="tab-chars" class="tab active">
+    <div class="hint">修改会自动保存。同源打开的游戏会自动重新载入；双击本地文件时，请在游戏“设置 → 导入配置”中应用导出的 JSON。</div>
+    <div class="grid" id="charsGrid"></div>
+    <div class="btnRow"><button class="action" data-reset="chars">重置角色</button></div>
+  </section>
+
+  <section id="tab-hunters" class="tab">
+    <div class="grid" id="huntersGrid"></div>
+    <div class="btnRow"><button class="action" data-reset="hunters">重置追猎者</button></div>
+  </section>
+
+  <section id="tab-global" class="tab">
+    <div class="globalGroup">
+      <h2>全局倍率</h2><div class="presets"><button data-preset="standard" class="preset"><b>标准</b><span>默认环境倍率</span></button><button data-preset="gentle" class="preset"><b>舒缓</b><span>减轻追逐压力</span></button><button data-preset="pressure" class="preset"><b>高压</b><span>增强追猎挑战</span></button></div>
+      <div id="globalRows"></div>
+    </div>
+    <div class="btnRow"><button class="action" data-reset="global">重置全局</button></div>
+  </section>
+
+  <section id="tab-export" class="tab">
+    <div class="hint">修改会自动保存。同源打开的游戏会自动重新载入；双击本地文件时，请在游戏“设置 → 导入配置”中应用导出的 JSON。</div>
+    <h2 class="sectionTitle">当前配置 JSON</h2>
+    <textarea id="exportArea" spellcheck="false"></textarea>
+    <div class="btnRow">
+      <button class="action primary" id="copyJsonBtn">复制 JSON</button>
+      <button class="action" id="downloadBtn">下载 JSON</button>
+    </div>
+    <h2 class="sectionTitle" style="margin-top:24px;">导入</h2><label class="file-picker">选择 JSON 文件<input id="fileImport" type="file" accept=".json,application/json"></label>
+    <textarea id="importArea" spellcheck="false" placeholder="粘贴 JSON 到这里..."></textarea>
+    <div class="btnRow">
+      <button class="action primary" id="importBtn">从 JSON 导入</button>
+      <button class="action danger" id="resetAllBtn">全部重置为默认</button>
+    </div>
+  </section>
+<footer class="lab-footer">PUPIL / DEEP SPACE ECHOES <span>所有预设仅修改全局倍率 · 单项参数可随时重置</span></footer></main>
+<script src="js/config.js"></script><script src="js/art.js"></script><script src="js/fluid-art.js"></script><script src="js/laboratory.js"></script></body></html>
